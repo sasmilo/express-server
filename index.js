@@ -54,6 +54,18 @@ app.put("/updatestatus/:id", (req, res) => {
 })
 
 
-app.delete("/products/:id", (req, res) => {})
+app.delete("/delete/:id", (req, res) => {
+    const product = Products.find((product) => product.id === Number(req.params.id))
+    if (product) {
+        Products.splice(Products.indexOf(product), 1)
+        res.json(product)
+    } else {
+        res.status(404)
+        throw new Error("Product not found")
+    }
+
+    res.json(Products)
+
+})
 
 
