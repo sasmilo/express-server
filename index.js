@@ -5,6 +5,7 @@ const app = Express()
 const port = 3000
 app.use(Express.json())
 app.use(Express.urlencoded({ extended: true }))
+app.use(Express.static('public'))
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)})
