@@ -9,7 +9,9 @@ The REST API calls are in the file: http.rest (we are using REST Client extensio
 REST API endpoints are:
 
 http://localhost:3000/ - GET - returns a simple message, it's a home page
+
 http://localhost:3000/products - GET - returns an actual list of products. Starts with the content of the file products.js in the JSON format
+
 http://localhost:3000/products/id - GET - returns the JSON representation of the product with the given id 
 
 http://localhost:3000/products - POST - creates a new product. The body of the request should be in the JSON format. The id of the new product is generated manually. The new product is added to the actual list of products.js. The response is the JSON representation of the new product.
