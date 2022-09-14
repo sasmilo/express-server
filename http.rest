@@ -6,7 +6,7 @@ Content-Type: application/json
 
 {
   "id": 4,
-  "name": "New Product"
+  "name": "Newer Product"
   
 }
 
@@ -15,7 +15,7 @@ PUT http://localhost:3000/updatestatus/4
 Content-Type: application/json
 
 {
-  "status": "on sale"
+  "status": "on sale" 
   
 }
 
