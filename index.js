@@ -37,6 +37,23 @@ app.post("/add", (req, res) => {
 })
 
 
-app.put("/", (req, res) => {})
-app.delete("/", (req, res) => {})
+app.put("/updatestatus/:id", (req, res) => {
+    const product = Products.find((product) => product.id === Number(req.params.id))
+    if (product) {
+        product.status = req.body.status
+        res.json(product)
+    } else {
+        res.status(404)
+        throw new Error("Product not found")
+    }
+
+    res.json(Products)
+    // res.send(req.params)
+    // res.json(Products)
+
+})
+
+
+app.delete("/products/:id", (req, res) => {})
+
 

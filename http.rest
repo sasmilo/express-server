@@ -9,3 +9,12 @@ Content-Type: application/json
   "name": "New Product"
   
 }
+
+###
+PUT http://localhost:3000/updatestatus/2
+Content-Type: application/json
+
+{
+  "status": "on sale"
+  
+}
