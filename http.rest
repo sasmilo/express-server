@@ -1,26 +1,26 @@
 GET http://localhost:3000/products/3
 
 ###
-POST http://localhost:3000/add
+POST http://localhost:3000/products
 Content-Type: application/json
 
 {
   "id": 4,
-  "name": "Newer Product"
+  "name": "New Product"
   
 }
 
 ###
-PUT http://localhost:3000/updatestatus/4
+PUT http://localhost:3000/products/4
 Content-Type: application/json
 
 {
-  "status": "on sale" 
+  "status": "sold out" 
   
 }
 
 ###
-DELETE http://localhost:3000/delete/4
+DELETE http://localhost:3000/products/4
 
 
 ###
